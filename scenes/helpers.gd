@@ -19,7 +19,7 @@ func map(array, object, f):
 
 # Run a simple command with arguments, blocking, using OS.execute.
 func exec(command, args=[], crash_on_fail=true):
-	var debug = false
+	var debug = true
 	
 	if debug:
 		print("exec: %s [%s]" % [command, PoolStringArray(args).join(", ")])
@@ -36,6 +36,7 @@ func exec(command, args=[], crash_on_fail=true):
 	return {"output": output, "exit_code": exit_code}
 
 func exec_async(command, args=[]):
+	print("Executing command %s with args %s" % [command, args])
 	OS.execute(command, args, false)
 
 # Return the contents of a file. If no fallback_string is provided, crash when

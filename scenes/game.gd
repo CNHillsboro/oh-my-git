@@ -129,6 +129,7 @@ func notify(text, target=null, hint_slug=null):
 		save_state()
 		
 func open_survey():
+	print("Survey opened.")
 	OS.shell_open("https://docs.google.com/forms/d/e/1FAIpQLSehHVcYfELT59h6plcn2ilbuqBcmDX3TH0qzB4jCgFIFOy_qg/viewform")
 	
 func toggle_music():
